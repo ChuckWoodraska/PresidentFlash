@@ -6,7 +6,7 @@ from loguru import logger
 from src.game_logic import GameLogic
 import os
 
-app = FastAPI()
+app = FastAPI(root_path="/president-flash")
 game_logic = GameLogic()
 
 # Setup templates

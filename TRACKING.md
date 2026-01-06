@@ -8,11 +8,15 @@ I want to expand the data in  @data.py to include all US Presidents and move i
 
 Number of Prompts needed: 2
 
-Time:
+Time: 45 minutes
 
 Success:
 
-Link:
+Success
+
+I had to do very little other than prompt and it basically 1 shotted what I was asking for. I needed to make minor changes for hosting because of how I set it up but probably could have even asked for the changes and had them made.
+
+Link: https://chuck.rocks/president-flash
 
 Prexisting Files:
 
