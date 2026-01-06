@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>President Flashcards</title>
+    <style>
+        body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; text-align: center; }
+        .card { border: 1px solid #ccc; padding: 20px; border-radius: 8px; margin-top: 20px; }
+        .options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
+        button { padding: 10px; font-size: 16px; cursor: pointer; }
+        .result { margin-top: 20px; font-weight: bold; font-size: 18px; }
+        .correct { color: green; }
+        .incorrect { color: red; }
+    </style>
+</head>
+<body>
+    <h1>US President Flashcards</h1>
+
+    {% if last_result %}
+        <div class="result {% if 'Correct' in last_result %}correct{% else %}incorrect{% endif %}">
+            {{ last_result }}
+        </div>
+    {% endif %}
+
+    <div class="card">
+        <h2>{{ question }}</h2>
+
+        <form action="/check" method="post">
+            <input type="hidden" name="correct_answer" value="{{ correct_answer }}">
+            <div class="options">
+                {% for option in options %}
+                    <button type="submit" name="answer" value="{{ option }}">{{ option }}</button>
+                {% endfor %}
+            </div>
+        </form>
+    </div>
+</body>
+</html>
