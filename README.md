@@ -10,6 +10,7 @@ A simple Dockerized Python web application that quizzes you on US Presidents.
   - What years were they president?
   - Which president oversaw a specific legislation/act?
 - Multiple choice format.
+- Data stored in a SQLite database.
 
 ## Running with Docker
 
@@ -32,7 +33,12 @@ A simple Dockerized Python web application that quizzes you on US Presidents.
    uv sync
    ```
 
-2. Run the server:
+2. Initialize the database:
+   ```bash
+   uv run python src/init_db.py
+   ```
+
+3. Run the server:
    ```bash
    uv run uvicorn src.main:app --reload
    ```
