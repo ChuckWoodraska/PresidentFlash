@@ -23,3 +23,7 @@ Prexisting Files:
 .gitignore
 AGENTS.md
 TRACKING.md
+
+Tools: PyCharm with Google Gemini Plugin 
+
+Model: Gemini 3
